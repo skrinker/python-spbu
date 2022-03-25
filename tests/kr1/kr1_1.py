@@ -1,5 +1,4 @@
 import unittest
-from unittest import TestCase
 
 from kr_1.kr1_1 import print_usage_statistic, Spy
 
@@ -30,7 +29,6 @@ class SpyTestCase(unittest.TestCase):
         actual = []
         for _, parameters in print_usage_statistic(foo):
             actual.append(parameters)
-
 
         expected = [
             {"args": (1,), "kwargs": {}},

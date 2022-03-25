@@ -1,7 +1,7 @@
 from datetime import datetime
 from functools import update_wrapper
-from typing import Callable, List, Any, Tuple
-from typing import Optional, Callable, Any
+from typing import List, Tuple
+from typing import Callable, Any
 
 
 class Spy:
@@ -25,4 +25,3 @@ def print_usage_statistic(function: Callable):
         return
 
     raise TypeError("The function should be decorated with @Spy.")
-
