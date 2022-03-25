@@ -10,6 +10,7 @@ def check_message(actual, expected: str) -> bool:
 class SpyTestCase(unittest.TestCase):
     def test_error_function(self):
         with self.assertRaises(ValueError) as context:
+
             def foo():
                 return 5
 
@@ -22,7 +23,8 @@ class SpyTestCase(unittest.TestCase):
 
     def test_usual_function(self):
         @Spy
-        def foo(number): return number
+        def foo(number):
+            return number
 
         foo(1)
         foo(2)
@@ -35,8 +37,7 @@ class SpyTestCase(unittest.TestCase):
         expected = [
             {"args": (1,), "kwargs": {}},
             {"args": (2,), "kwargs": {}},
-            {"args": (3,), "kwargs": {}}
-
+            {"args": (3,), "kwargs": {}},
         ]
 
         self.assertEqual(actual, expected)
