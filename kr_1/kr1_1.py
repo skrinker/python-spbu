@@ -24,5 +24,5 @@ def print_usage_statistic(function: Callable):
             yield log
         return
 
-    raise ValueError("The function should be decorated with @Spy.")
+    raise TypeError("The function should be decorated with @Spy.")
 
