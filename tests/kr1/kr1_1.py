@@ -16,7 +16,9 @@ class SpyTestCase(unittest.TestCase):
             for _, _ in print_usage_statistic(foo):
                 pass
 
-        self.assertTrue(check_message(context, "The function should be decorated with @Spy."))
+        self.assertTrue(
+            check_message(context, "The function should be decorated with @Spy.")
+        )
 
     def test_usual_function(self):
         @Spy
